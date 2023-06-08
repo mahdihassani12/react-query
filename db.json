@@ -1,0 +1,19 @@
+{
+    "superheros":[
+        {
+            "id" : 1,
+            "name": "Mahdi",
+            "alterEgo": "Mahdi Hassani"
+        },
+        {
+            "id": 2,
+            "name": "Masooma",
+            "alterEgo": "Masooma Amini"
+        },
+        {
+            "id": 3,
+            "name": "Ahmad",
+            "alterEgo": "Ahmad Hassani"
+        }
+    ]
+}

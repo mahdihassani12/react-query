@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+}
+
+.navbar {
+    background: #eee;
+    box-shadow: 1px 1px 15px 3px #d3d3d3;
+    margin-bottom: 30px;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-nav li {
+    display: inline-block;
+    padding: 15px 15px;
+}
+
+.navbar-nav li a{
+    text-decoration: unset;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.logo a {
+    text-decoration: unset;
+    font-size: 20px;
+    font-weight: bold;
+}
