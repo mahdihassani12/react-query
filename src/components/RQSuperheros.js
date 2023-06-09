@@ -7,7 +7,12 @@ import axios from "axios";
 
 function RQSuperherosPage() {
 
-    const  {isLoading, data, isError, error} = useQuery('superHeros', fetchSuperHeros,{ cacheTime: 5000 });
+    const  {isLoading, data, isError, error} = useQuery('superHeros', fetchSuperHeros);
+
+    /*
+    * If the user wants to change the cache time for query { cacheTime: milliseconds }
+    * If the user wants to change the stale time (after how long the fetch data works in background) {staleTime: milliseconds}
+    */ 
 
     if(isLoading)
     {
