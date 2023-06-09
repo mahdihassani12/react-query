@@ -7,25 +7,27 @@ import axios from "axios";
 
 function RQSuperherosPage() {
 
-    const  {isLoading, data} = useQuery('superHeros', fetchSuperHeros);
+    const  {isLoading, data, isError, error} = useQuery('superHeros', fetchSuperHeros);
 
     if(isLoading)
     {
         return <div>Loading...</div>
     }
 
-    else {
-        return (
-            <>
-                <h2>React query super heros</h2>
-                {
-                    data?.data.map(hero => {
-                        return <div key={hero.id}>{hero.name}</div>
-                    })
-                }
-            </>
-        )
+    if(isError){
+        return <div>{ error.message }</div>
     }
+
+    return (
+        <>
+            <h2>React query super heros</h2>
+            {
+                data?.data.map(hero => {
+                    return <div key={hero.id}>{hero.name}</div>
+                })
+            }
+        </>
+    )
 }
 
 export default RQSuperherosPage;
