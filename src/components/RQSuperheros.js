@@ -7,7 +7,7 @@ import axios from "axios";
 
 function RQSuperherosPage() {
 
-    const  {isLoading, data, isError, error} = useQuery('superHeros', fetchSuperHeros);
+    const  {isLoading, data, isError, error} = useQuery('superHeros', fetchSuperHeros,{ cacheTime: 5000 });
 
     if(isLoading)
     {
