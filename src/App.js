@@ -7,14 +7,14 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage></HomePage>}></Route>
-        <Route path="/SuperherosPage" element={<SuperherosPage></SuperherosPage>}></Route>
-        <Route path="/RQSuperherosPage" element={<RQSuperherosPage></RQSuperherosPage>}></Route>
-      </Routes>
-    </div>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route path="/SuperherosPage" element={<SuperherosPage></SuperherosPage>}></Route>
+          <Route path="/RQSuperherosPage" element={<RQSuperherosPage></RQSuperherosPage>}></Route>
+        </Routes>
+      </div>
   );
 }
 
