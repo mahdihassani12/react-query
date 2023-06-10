@@ -7,7 +7,23 @@ import axios from "axios";
 
 function RQSuperherosPage() {
 
-    const  {isLoading, data, isError, error, refetch} = useQuery('superHeros', fetchSuperHeros, { enabled: false });
+    const onSuccess = () => {
+        console.log("Perfome side effect after fetching data");
+    }
+
+    const onError = () => {
+        console.log("Perfom side effect after failing to load data");
+    }
+
+    const  {isLoading, data, isError, error, refetch} = useQuery(
+        'superHeros', 
+        fetchSuperHeros, 
+        { 
+            enabled: false,
+            onSuccess,
+            onError 
+        }
+    );
 
     /*
     * If the user wants to change the cache time for query { cacheTime: milliseconds }
