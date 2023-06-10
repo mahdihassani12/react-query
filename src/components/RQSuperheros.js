@@ -12,6 +12,8 @@ function RQSuperherosPage() {
     /*
     * If the user wants to change the cache time for query { cacheTime: milliseconds }
     * If the user wants to change the stale time (after how long the fetch data works in background) {staleTime: milliseconds}
+    * If the user wants to fetch the api on mount: { refechOnMount: true }
+    * If the user wants to keep up to date the UI with remote data: { refetchOnwindowFocus: true }
     */ 
 
     if(isLoading)
