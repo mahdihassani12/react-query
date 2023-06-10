@@ -1,4 +1,5 @@
-import { useSuperheroesData } from '../hooks/useSuperheroesData';
+import { useSuperheroesData } from "../hooks/useSuperheroesData";
+import { Link } from "react-router-dom";
 
 function RQSuperherosPage() {
   const onSuccess = () => {
@@ -9,7 +10,10 @@ function RQSuperherosPage() {
     console.log("Perfom side effect after failing to load data");
   };
 
-  const { isLoading, data, isError, error, refetch } = useSuperheroesData(onSuccess, onError);
+  const { isLoading, data, isError, error, refetch } = useSuperheroesData(
+    onSuccess,
+    onError
+  );
 
   /*
    * If the user wants to change the cache time for query { cacheTime: milliseconds }
@@ -32,7 +36,11 @@ function RQSuperherosPage() {
     <>
       <h2>React query super heros</h2>
       {data?.data.map((hero) => {
-        return <div key={hero.id}>{hero.name}</div>;
+        return (
+          <div key={hero.id}>
+            <Link to={`/RQSuperHero/${hero.id}`}>{hero.name}</Link>
+          </div>
+        );
       })}
     </>
   );
