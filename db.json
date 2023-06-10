@@ -15,5 +15,19 @@
             "name": "Ahmad",
             "alterEgo": "Ahmad Hassani"
         }
+    ],
+    "friends":[
+        {
+            "id": 1,
+            "name": "Rajab"
+        },
+        {
+            "id": 2,
+            "name": "Jumah"
+        },
+        {
+            "id": 3,
+            "name": "Ali Reza"
+        }
     ]
 }
