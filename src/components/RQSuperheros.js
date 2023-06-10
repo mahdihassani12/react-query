@@ -7,7 +7,7 @@ import axios from "axios";
 
 function RQSuperherosPage() {
 
-    const  {isLoading, data, isError, error} = useQuery('superHeros', fetchSuperHeros);
+    const  {isLoading, data, isError, error, refetch} = useQuery('superHeros', fetchSuperHeros, { enabled: false });
 
     /*
     * If the user wants to change the cache time for query { cacheTime: milliseconds }
@@ -30,6 +30,7 @@ function RQSuperherosPage() {
     return (
         <>
             <h2>React query super heros</h2>
+            <button onClick={refetch} >Fetch heroes</button>
             {
                 data?.data.map(hero => {
                     return <div key={hero.id}>{hero.name}</div>
