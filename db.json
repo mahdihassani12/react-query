@@ -29,5 +29,17 @@
             "id": 3,
             "name": "Ali Reza"
         }
+    ],
+    "users":[
+        {
+            "id": "mahdi@gmail.com",
+            "channelId": "test"
+        }
+    ],
+    "channels": [
+        {
+            "id": "test",
+            "courses": ["react", "node", "tailwind"]
+        }
     ]
 }
