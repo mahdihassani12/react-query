@@ -4,6 +4,7 @@ import SuperherosPage from './components/Superheros';
 import RQSuperherosPage from './components/RQSuperheros';
 import RQSuperHero from './components/RQSuperHero';
 import ParallelQueries from './components/ParallelQueries'; 
+import DynamicParrallelQueries from './components/DynamicParrallelQueries';
 import Navbar from './components/Navbar';
 import { Route, Routes } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/RQSuperherosPage" element={<RQSuperherosPage></RQSuperherosPage>}></Route>
           <Route path="/ParallelQueries" element={<ParallelQueries></ParallelQueries>}></Route>
           <Route path="/RQSuperHero/:id" element={<RQSuperHero></RQSuperHero>}></Route>
+          <Route path="/DynamicParrallelQueries" element={<DynamicParrallelQueries heroIds={[1, 3]} />}></Route>
         </Routes>
       </div>
   );
