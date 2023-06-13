@@ -8,7 +8,7 @@ import DynamicParrallelQueries from './components/DynamicParrallelQueries';
 import DependentQueries from './components/DependentQueries';
 import Navbar from './components/Navbar';
 import { Route, Routes } from "react-router-dom";
-
+import { PaginatedQueries } from './components/PaginatedQueries';
 function App() {
   return (
       <div className="App">
@@ -21,6 +21,7 @@ function App() {
           <Route path="/RQSuperHero/:id" element={<RQSuperHero></RQSuperHero>}></Route>
           <Route path="/DynamicParrallelQueries" element={<DynamicParrallelQueries heroIds={[1, 3]} />}></Route>
           <Route path='/DependentQueries' element={<DependentQueries email="mahdi@gmail.com" />}></Route>
+          <Route path='/PaginatedQueries' element={<PaginatedQueries />}></Route>
         </Routes>
       </div>
   );
