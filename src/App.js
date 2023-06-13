@@ -9,6 +9,8 @@ import DependentQueries from './components/DependentQueries';
 import Navbar from './components/Navbar';
 import { Route, Routes } from "react-router-dom";
 import { PaginatedQueries } from './components/PaginatedQueries';
+import { InfiniteQueries } from './components/InfiniteQueries';
+
 function App() {
   return (
       <div className="App">
@@ -22,6 +24,7 @@ function App() {
           <Route path="/DynamicParrallelQueries" element={<DynamicParrallelQueries heroIds={[1, 3]} />}></Route>
           <Route path='/DependentQueries' element={<DependentQueries email="mahdi@gmail.com" />}></Route>
           <Route path='/PaginatedQueries' element={<PaginatedQueries />}></Route>
+          <Route path='/InfiniteQueries' element={<InfiniteQueries />}></Route>
         </Routes>
       </div>
   );
